@@ -100,6 +100,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 80px 80px 80px 100px;
+    position: relative;
+    overflow: hidden;
   }
 
   .domain-tag {
@@ -147,9 +149,15 @@
   }
 
   .tooth-graphic {
-    font-size: 48px;
-    margin-bottom: 32px;
-    opacity: 0.6;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    font-size: 320px;
+    line-height: 1;
+    user-select: none;
+    color: var(--charcoal);
   }
 
   .section-label {
@@ -1261,9 +1269,9 @@
       <h2>Зубы громче слов. Они — <em>самое наглядное доказательство</em> эмоционального насилия и родительского отчуждения.</h2>
       <p>Если то, что вы здесь прочитали, совпадает с тем, что вы пережили — поделитесь этим.</p>
       <p>Каждый новый случай, каждый новый наблюдатель делает картину яснее. Нам нужно больше данных. Больше историй. Больше глаз на это явление.</p>
-      <p class="fine-print">Вопросы, наблюдения или результаты диагностики → psyteeth@gmail.com</p>
+      <p class="fine-print">Вопросы, наблюдения или результаты диагностики → <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e292919b968787968aa2858f838b8ecc818d8f">[email&#160;protected]</a></p>
       <div class="cta-group">
-        <a href="mailto:psyteeth@gmail.com" class="cta-primary">Написать нам →</a>
+        <a href="/cdn-cgi/l/email-protection#c5b5b6bcb1a0a0b1ad85a2a8a4aca9eba6aaa8" class="cta-primary">Написать нам →</a>
         <a href="https://psyteeth.com" class="cta-secondary">English version →</a>
       </div>
     </div>
@@ -1304,14 +1312,14 @@
       </div>
       <div class="footer-links">
         <a href="https://psyteeth.com">English version</a>
-        <a href="#" id="email-link">psyteeth@gmail.com</a>
+        <a href="#" id="email-link"><span class="__cf_email__" data-cfemail="9aeae9e3eeffffeef2dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</span></a>
         <span style="font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted);">© 2026 Антон Казаков · психостоматология.рф</span>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function switchTab(tab) {
   document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
@@ -1370,21 +1378,4 @@ function calculateScore(tab) {
     <p style="font-size: 13px;">
       <strong>0–30:</strong> Слабый паттерн или его отсутствие<br>
       <strong>31–60:</strong> Умеренный паттерн — стоит наблюдать<br>
-      <strong>61–100:</strong> Выраженный паттерн — зуб, вероятно, серьёзно пострадал
-    </p>
-  `;
-}
-
-// Email obfuscation
-document.addEventListener('DOMContentLoaded', function() {
-  const u = 'psyteeth';
-  const d = 'gmail.com';
-  const el = document.getElementById('email-link');
-  if (el) {
-    el.href = 'mailto:' + u + '@' + d;
-    el.textContent = u + '@' + d;
-  }
-});
-</script>
-</body>
-</html>
+      <strong>61–100:</strong> Выраженный паттерн — зуб, веро�
