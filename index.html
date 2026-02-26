@@ -3,40 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Родительское отчуждение и зубы — доказательство у всех на виду | ПсиЗубы</title>
-
-<!-- SEO -->
-<meta name="description" content="Родительское отчуждение оставляет физические следы — в зубах. Пять лет исследований, 130+ задокументированных случаев. Центральные резцы отражают, какой родитель был очернён. Пройдите бесплатную диагностику.">
-<meta name="keywords" content="родительское отчуждение зубы, синдром родительского отчуждения, психосоматика зубов, зубы и отношения, психостоматология, отчуждение родителей доказательство, зубы психология, эмоциональное насилие над детьми зубы, резцы родительское отчуждение">
-<meta name="author" content="Антон Казаков">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xn--e1afmapc2ahdp2b.xn--p1ai/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://xn--e1afmapc2ahdp2b.xn--p1ai/">
-<meta property="og:title" content="Родительское отчуждение всегда оставляет след. В зубах.">
-<meta property="og:description" content="Зубы громче слов. Они — самое наглядное доказательство эмоционального насилия и родительского отчуждения. Пять лет исследований, 130+ случаев.">
-<meta property="og:image" content="https://xn--e1afmapc2ahdp2b.xn--p1ai/og-image.jpg">
-<meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Психостоматология №1">
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ResearchProject",
-  "name": "Психостоматология №1 — исследование зубов и родительского отчуждения",
-  "description": "Исследование связи между синдромом родительского отчуждения и разрушением зубных тканей. Пять лет клинических наблюдений, 130+ задокументированных случаев.",
-  "url": "https://психостоматология.рф",
-  "author": {
-    "@type": "Person",
-    "name": "Антон Казаков",
-    "jobTitle": "Психолог, исследователь психостоматологии"
-  },
-  "keywords": "родительское отчуждение, психостоматология, зубы, психосоматика, эмоциональное насилие"
-}
-</script>
+<title>Родительское отчуждение и зубы — доказательство у всех на виду | Психостоматология №1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -55,7 +22,9 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
+
   body {
     background: var(--warm-white);
     color: var(--charcoal);
@@ -65,11 +34,13 @@
     overflow-x: hidden;
   }
 
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+    overflow: hidden;
   }
 
   .hero-left {
@@ -89,8 +60,8 @@
     top: 0;
     bottom: 0;
     width: 60px;
-    background: linear-gradient(to right, var(--charcoal), transparent);
-    z-index: 3;
+    background: var(--charcoal);
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
   }
 
   .hero-right {
@@ -102,112 +73,159 @@
     position: relative;
   }
 
+  .tooth-graphic {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.06;
+    font-size: 320px;
+    line-height: 1;
+    user-select: none;
+    color: var(--charcoal);
+  }
+
   .domain-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--rust-light);
+    color: var(--rust);
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .domain-tag::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--rust);
   }
 
   h1 {
-    font-size: clamp(28px, 3.5vw, 46px);
+    font-size: clamp(42px, 5vw, 68px);
     font-weight: 300;
+    line-height: 1.1;
     color: var(--ivory);
-    line-height: 1.15;
+    margin-bottom: 24px;
     letter-spacing: -0.02em;
-    margin-bottom: 32px;
   }
 
   h1 em {
     font-style: italic;
     color: var(--rust-light);
-    display: block;
-    margin-top: 8px;
   }
 
   .hero-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 48px;
+    font-size: 17px;
+    color: var(--bone);
+    max-width: 400px;
     line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 48px;
   }
 
   .scroll-hint {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust-light);
-    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: pulse 2.5s ease-in-out infinite;
   }
 
-  .tooth-graphic {
-    position: absolute;
-    right: -20px;
-    bottom: -60px;
-    opacity: 1;
-    font-size: 320px;
-    line-height: 1;
-    user-select: none;
+  .scroll-hint::after {
+    content: '↓';
+    font-size: 16px;
   }
 
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 20px;
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
   }
 
   .hero-right h2 {
-    font-size: clamp(20px, 2.2vw, 28px);
+    font-size: clamp(22px, 3vw, 32px);
     font-weight: 300;
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-    margin-bottom: 20px;
     color: var(--graphite);
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-right h2 strong {
+    font-weight: 600;
+    color: var(--charcoal);
   }
 
   .hero-right p {
-    font-size: 16px;
     color: var(--muted);
-    line-height: 1.85;
-    margin-bottom: 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 48px;
   }
 
   .cta-primary {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: var(--rust);
-    color: white;
+    gap: 16px;
+    background: var(--charcoal);
+    color: var(--ivory);
     text-decoration: none;
-    padding: 16px 32px;
+    padding: 18px 36px;
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    transition: background 0.25s ease;
-    align-self: flex-start;
+    transition: all 0.3s ease;
+    border: 1px solid var(--charcoal);
+    cursor: pointer;
   }
 
-  .cta-primary:hover { background: var(--charcoal); }
+  .cta-primary:hover {
+    background: var(--rust);
+    border-color: var(--rust);
+  }
 
-  section { padding: 100px 0; }
+  /* SECTION STYLES */
+  section {
+    padding: 100px 0;
+  }
 
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
   }
 
-  .concept { background: var(--warm-white); }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  /* CONCEPT SECTION */
+  .concept {
+    background: var(--cream);
+  }
 
   .concept-grid {
     display: grid;
@@ -216,156 +234,181 @@
     align-items: start;
   }
 
-  .concept-grid h2 {
-    font-size: clamp(28px, 3vw, 42px);
+  .concept h2 {
+    font-size: clamp(32px, 4vw, 52px);
     font-weight: 300;
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--charcoal);
   }
 
-  .concept-grid h2 em {
+  .concept h2 em {
     font-style: italic;
     color: var(--rust);
   }
 
-  .concept-grid p {
+  .concept p {
     color: var(--graphite);
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 1.85;
-    margin-bottom: 20px;
   }
 
-  .concept-cards { display: flex; flex-direction: column; gap: 2px; }
+  .concept-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
   .concept-card {
-    background: var(--cream);
-    padding: 32px 36px;
+    background: var(--warm-white);
     border-left: 3px solid var(--rust);
+    padding: 28px 32px;
+    transition: transform 0.3s ease;
   }
 
-  .tooth-num {
+  .concept-card:hover {
+    transform: translateX(6px);
+  }
+
+  .concept-card .tooth-num {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.15em;
-    text-transform: uppercase;
     color: var(--rust);
-    margin-bottom: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   .concept-card h3 {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 12px;
-    letter-spacing: -0.01em;
+    color: var(--charcoal);
   }
 
   .concept-card p {
     font-size: 15px;
     color: var(--muted);
-    line-height: 1.75;
+    margin: 0;
+    line-height: 1.7;
   }
 
-  .concept-card p em { font-style: italic; color: var(--rust); }
-
-  .mechanism { background: var(--charcoal); color: var(--ivory); }
-
-  .mechanism .section-label { color: var(--rust-light); }
+  /* MECHANISM */
+  .mechanism {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
 
   .mechanism h2 {
-    font-size: clamp(28px, 3.5vw, 48px);
+    font-size: clamp(28px, 3.5vw, 46px);
     font-weight: 300;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
     max-width: 700px;
   }
 
-  .mechanism h2 em { font-style: italic; color: var(--rust-light); }
+  .mechanism h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
 
   .mechanism > .container > p {
     color: var(--bone);
     font-size: 17px;
-    line-height: 1.85;
-    max-width: 640px;
+    max-width: 600px;
     margin-bottom: 64px;
+    line-height: 1.85;
   }
 
   .mechanism-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
+    background: var(--graphite);
   }
 
   .step {
-    background: rgba(255,255,255,0.04);
-    padding: 40px 32px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    background: var(--charcoal);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+
+  .step:hover {
+    background: #242424;
   }
 
   .step-num {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--rust-light);
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--graphite);
+    line-height: 1;
+    margin-bottom: 24px;
     display: block;
-    margin-bottom: 20px;
   }
 
   .step h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--ivory);
     margin-bottom: 16px;
-    letter-spacing: -0.01em;
   }
 
   .step p {
     font-size: 15px;
     color: var(--bone);
-    line-height: 1.8;
+    line-height: 1.75;
   }
 
-  .step p strong { color: var(--ivory); font-weight: 400; }
+  .step p strong {
+    color: var(--rust-light);
+    font-weight: 400;
+  }
 
-  .questionnaires { background: var(--warm-white); }
+  /* QUESTIONNAIRE SECTION */
+  .questionnaires {
+    background: var(--warm-white);
+  }
 
   .questionnaires h2 {
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(28px, 3.5vw, 46px);
     font-weight: 300;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
   .questionnaires > .container > p {
-    font-size: 18px;
-    color: var(--graphite);
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 64px;
+    max-width: 580px;
     line-height: 1.8;
-    max-width: 640px;
-    margin-bottom: 8px;
   }
 
   .quiz-tabs {
     display: flex;
-    border-bottom: 1px solid var(--bone);
+    gap: 0;
     margin-bottom: 0;
-    margin-top: 48px;
+    border-bottom: 2px solid var(--bone);
   }
 
   .quiz-tab {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 16px 24px;
+    padding: 16px 32px;
     cursor: pointer;
     color: var(--muted);
-    margin-bottom: -1px;
-    transition: all 0.2s ease;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.25s ease;
   }
 
   .quiz-tab.active {
@@ -373,8 +416,18 @@
     border-bottom-color: var(--rust);
   }
 
-  .quiz-panel { display: none; padding-top: 48px; }
-  .quiz-panel.active { display: block; }
+  .quiz-tab:hover {
+    color: var(--charcoal);
+  }
+
+  .quiz-panel {
+    display: none;
+    padding: 48px 0;
+  }
+
+  .quiz-panel.active {
+    display: block;
+  }
 
   .quiz-header {
     display: grid;
@@ -386,170 +439,220 @@
   }
 
   .quiz-info h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    color: var(--charcoal);
   }
 
-  .meta-row { display: flex; flex-direction: column; gap: 12px; }
+  .quiz-info .meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
 
   .meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
     display: flex;
-    gap: 16px;
-    font-size: 14px;
+    gap: 12px;
   }
 
   .meta-item span:first-child {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    min-width: 120px;
-    padding-top: 2px;
+    color: var(--rust);
+    min-width: 80px;
   }
 
-  .meta-item span:last-child { color: var(--graphite); line-height: 1.5; }
+  .quiz-instructions {
+    background: var(--cream);
+    padding: 28px 32px;
+    border-left: 3px solid var(--sage);
+  }
 
   .quiz-instructions p {
     font-size: 15px;
-    color: var(--muted);
-    line-height: 1.8;
-    background: var(--cream);
-    padding: 24px 28px;
-    border-left: 3px solid var(--rust);
+    color: var(--graphite);
+    line-height: 1.75;
   }
 
-  .questions-list { display: flex; flex-direction: column; gap: 2px; margin-bottom: 48px; }
+  .quiz-instructions strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 
   .question-item {
-    display: flex;
-    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cream);
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    padding: 20px 28px;
-    background: var(--cream);
     gap: 32px;
+    transition: background 0.2s ease;
   }
 
-  .question-item:hover { background: #E8E1D0; }
-
-  .question-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--rust);
-    margin-right: 12px;
-    min-width: 24px;
+  .question-item:hover {
+    background: var(--cream);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 -16px;
+    border-radius: 2px;
   }
 
   .question-text {
-    font-size: 16px;
+    font-size: 17px;
     color: var(--graphite);
-    line-height: 1.5;
     font-style: italic;
+  }
+
+  .question-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 8px;
+    letter-spacing: 0.05em;
   }
 
   .rating-input {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
+    gap: 10px;
   }
 
-  .rating-input input {
-    width: 56px;
-    padding: 8px 12px;
-    border: 1px solid var(--bone);
-    background: white;
-    font-family: 'DM Mono', monospace;
-    font-size: 14px;
+  .rating-input input[type="number"] {
+    width: 64px;
+    height: 44px;
     text-align: center;
+    border: 1px solid var(--bone);
+    background: var(--warm-white);
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
     color: var(--charcoal);
     outline: none;
+    transition: border-color 0.25s ease;
+    -moz-appearance: textfield;
   }
 
-  .rating-input input:focus { border-color: var(--rust); }
+  .rating-input input[type="number"]::-webkit-outer-spin-button,
+  .rating-input input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .rating-input input:focus {
+    border-color: var(--rust);
+  }
 
   .rating-label {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
+    font-size: 10px;
+    color: var(--bone);
+    letter-spacing: 0.1em;
   }
 
   .section-divider {
-    background: var(--ivory);
-    border: 1px solid var(--bone);
-    padding: 32px 36px;
-    margin-bottom: 32px;
+    margin: 40px 0 32px;
+    padding-top: 32px;
+    border-top: 2px solid var(--charcoal);
   }
 
   .section-divider h4 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    color: var(--charcoal);
-    letter-spacing: -0.01em;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 20px;
   }
 
-  .bonus-questions { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+  .bonus-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-  .bonus-item { display: flex; flex-direction: column; gap: 8px; }
+  .bonus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--cream);
+  }
 
   .bonus-item label {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--graphite);
     font-style: italic;
-    line-height: 1.6;
+    flex: 1;
+    cursor: pointer;
   }
 
-  .checkbox-group { display: flex; gap: 24px; }
+  .bonus-item .checkbox-group {
+    display: flex;
+    gap: 16px;
+  }
 
   .checkbox-group label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-family: 'DM Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--muted);
     cursor: pointer;
     font-style: normal;
   }
 
-  .score-panel {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 48px;
-    background: var(--charcoal);
-    padding: 48px;
-    margin-top: 16px;
+  .checkbox-group input[type="checkbox"] {
+    accent-color: var(--rust);
+    width: 14px;
+    height: 14px;
   }
 
-  .score-display { display: flex; flex-direction: column; align-items: center; }
+  .score-panel {
+    margin-top: 48px;
+    background: var(--cream);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .score-display {
+    text-align: center;
+  }
 
   .score-number {
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 300;
-    color: var(--ivory);
+    color: var(--charcoal);
     line-height: 1;
-    letter-spacing: -0.03em;
+    font-family: 'Cormorant Garamond', serif;
+    transition: color 0.5s ease;
   }
 
   .score-max {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
+    font-size: 14px;
     color: var(--muted);
-    margin-top: 4px;
-    margin-bottom: 20px;
+    letter-spacing: 0.1em;
   }
 
   .score-bar {
-    width: 100%;
-    height: 3px;
-    background: rgba(255,255,255,0.1);
-    margin-bottom: 24px;
+    margin-top: 20px;
+    height: 4px;
+    background: var(--bone);
+    border-radius: 0;
+    overflow: hidden;
   }
 
   .score-bar-fill {
@@ -561,19 +664,19 @@
 
   .score-interpretation {
     padding-left: 48px;
-    border-left: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid var(--bone);
   }
 
   .score-interpretation h4 {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 12px;
-    color: var(--ivory);
+    color: var(--charcoal);
   }
 
   .score-interpretation p {
     font-size: 15px;
-    color: var(--bone);
+    color: var(--muted);
     line-height: 1.75;
     margin-bottom: 16px;
   }
@@ -595,9 +698,14 @@
     margin-top: 32px;
   }
 
-  .calc-btn:hover { background: var(--ivory); color: var(--charcoal); }
+  .calc-btn:hover {
+    background: var(--charcoal);
+  }
 
-  .stats { background: var(--cream); }
+  /* RESEARCH STATS */
+  .stats {
+    background: var(--cream);
+  }
 
   .stats-grid {
     display: grid;
@@ -622,7 +730,10 @@
     letter-spacing: -0.03em;
   }
 
-  .stat-number em { font-style: normal; color: var(--rust); }
+  .stat-number em {
+    font-style: normal;
+    color: var(--rust);
+  }
 
   .stat-label {
     font-family: 'DM Mono', monospace;
@@ -633,9 +744,15 @@
     line-height: 1.6;
   }
 
-  .diagnosis-cta { background: var(--charcoal); padding: 120px 0; }
+  /* DIAGNOSIS CTA */
+  .diagnosis-cta {
+    background: var(--charcoal);
+    padding: 120px 0;
+  }
 
-  .cta-inner { max-width: 800px; }
+  .cta-inner {
+    max-width: 800px;
+  }
 
   .diagnosis-cta h2 {
     font-size: clamp(32px, 4vw, 54px);
@@ -646,7 +763,10 @@
     margin-bottom: 24px;
   }
 
-  .diagnosis-cta h2 em { font-style: italic; color: var(--rust-light); }
+  .diagnosis-cta h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
 
   .diagnosis-cta p {
     color: var(--bone);
@@ -681,9 +801,14 @@
     transition: color 0.25s ease;
   }
 
-  .cta-secondary:hover { color: var(--ivory); }
+  .cta-secondary:hover {
+    color: var(--ivory);
+  }
 
-  .about { background: var(--ivory); }
+  /* ABOUT */
+  .about {
+    background: var(--ivory);
+  }
 
   .about-grid {
     display: grid;
@@ -692,7 +817,10 @@
     align-items: start;
   }
 
-  .about-left { position: sticky; top: 40px; }
+  .about-left {
+    position: sticky;
+    top: 40px;
+  }
 
   .about-name {
     font-size: 32px;
@@ -710,7 +838,11 @@
     margin-bottom: 32px;
   }
 
-  .about-left p { font-size: 15px; color: var(--muted); line-height: 1.75; }
+  .about-left p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
 
   .about-right h2 {
     font-size: clamp(28px, 3vw, 40px);
@@ -720,29 +852,22 @@
     line-height: 1.2;
   }
 
-  .about-right p { color: var(--graphite); font-size: 17px; line-height: 1.85; margin-bottom: 20px; }
-
-  .about-right h2 em { font-style: italic; color: var(--rust); }
-
-  .about-quote {
-    border-left: 3px solid var(--rust);
-    padding: 24px 32px;
-    margin: 40px 0;
-    background: var(--cream);
+  .about-right p {
+    color: var(--graphite);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 20px;
   }
 
-  .about-quote p {
-    font-size: 20px;
-    font-style: italic;
+  .about-right p strong {
+    font-weight: 600;
     color: var(--charcoal);
-    line-height: 1.6;
-    margin: 0;
   }
 
+  /* FOOTER */
   footer {
-    background: var(--charcoal);
-    padding: 60px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    background: #141414;
+    padding: 60px 0 40px;
   }
 
   .footer-inner {
@@ -751,61 +876,118 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
+    margin-bottom: 40px;
   }
 
-  .footer-brand {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--ivory);
+    letter-spacing: -0.01em;
   }
 
-  .footer-brand span { color: var(--rust-light); }
+  .footer-logo span {
+    color: var(--rust);
+  }
 
-  .footer-links { display: flex; gap: 32px; align-items: center; }
-
-  .footer-links a {
+  .footer-meta {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    letter-spacing: 0.12em;
     color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
+    text-transform: uppercase;
   }
 
-  .footer-links a:hover { color: var(--ivory); }
+  .footer-bottom {
+    border-top: 1px solid #2A2A2A;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-  @keyframes fadeInUp {
+  .footer-bottom p {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 0.08em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-left > * { animation: fadeInUp 0.8s ease forwards; }
+  .hero-left > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
   .hero-left > *:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
   .hero-left > *:nth-child(2) { animation-delay: 0.25s; opacity: 0; }
   .hero-left > *:nth-child(3) { animation-delay: 0.4s; opacity: 0; }
   .hero-left > *:nth-child(4) { animation-delay: 0.55s; opacity: 0; }
 
-  .hero-right > * { animation: fadeInUp 0.8s ease forwards; }
+  .hero-right > * {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
   .hero-right > *:nth-child(1) { animation-delay: 0.3s; opacity: 0; }
   .hero-right > *:nth-child(2) { animation-delay: 0.45s; opacity: 0; }
   .hero-right > *:nth-child(3) { animation-delay: 0.6s; opacity: 0; }
   .hero-right > *:nth-child(4) { animation-delay: 0.75s; opacity: 0; }
 
+  /* RESPONSIVE */
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 80px 40px 60px; min-height: 60vh; }
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+      padding: 80px 40px 60px;
+      min-height: 60vh;
+    }
+
     .hero-left::after { display: none; }
-    .hero-right { padding: 60px 40px 80px; }
-    .concept-grid, .about-grid, .quiz-header { grid-template-columns: 1fr; gap: 40px; }
+
+    .hero-right {
+      padding: 60px 40px 80px;
+    }
+
+    .concept-grid,
+    .about-grid,
+    .quiz-header {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
     .about-left { position: static; }
-    .mechanism-steps { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .score-panel { grid-template-columns: 1fr; }
-    .score-interpretation { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 32px; }
-    .cta-group { flex-direction: column; align-items: flex-start; }
+
+    .mechanism-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .score-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .score-interpretation {
+      border-left: none;
+      border-top: 1px solid var(--bone);
+      padding-left: 0;
+      padding-top: 32px;
+    }
+
+    .cta-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   @media (max-width: 600px) {
@@ -894,14 +1076,14 @@
         <span class="step-num">01</span>
         <h3>Идеализация и расщепление</h3>
         <p>
-          Отчуждающий родитель устанавливает бинарную систему: <strong>«Я хороший родитель. Тот родитель опасен».</strong> Нервная система ребёнка проецирует это расщепление на его идентичность — и на его зубы.
+          The alienating parent installs a binary: <strong>«Я хороший родитель. Тот родитель опасен».</strong> Нервная система ребёнка проецирует это расщепление на его идентичность — и на его зубы.
         </p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <h3>Идентификация заблокирована</h3>
         <p>
-          Естественная идентификация с отчуждённым родителем становится нейрологически угрожающей. <strong>«Если я похож на него/неё — я плохой».</strong> Стыд за видимость. Беспомощность при конфронтации. Лимбическая система блокируется.
+          Natural identification with the alienated parent becomes neurologically threatening. <strong>«Если я похож на него/неё — я плохой».</strong> Стыд за видимость. Беспомощность при конфронтации. Лимбическая система блокируется.
         </p>
       </div>
       <div class="step">
@@ -932,7 +1114,7 @@
       <button class="quiz-tab" onclick="switchTab('t11')">Зуб 11 — Паттерн очернённой матери</button>
     </div>
 
-    <!-- ЗУБ 21 -->
+    <!-- TOOTH 21 PANEL -->
     <div class="quiz-panel active" id="panel-t21">
       <div class="quiz-header">
         <div class="quiz-info">
@@ -1024,6 +1206,7 @@
         </div>
       </div>
 
+      <!-- BONUS SECTION -->
       <div class="section-divider">
         <h4>Дополнительные вопросы — маркеры родительского отчуждения</h4>
         <div class="bonus-questions">
@@ -1085,8 +1268,8 @@
         </div>
         <div class="quiz-instructions">
           <p>
-            Оцените каждое утверждение от <strong>0 до 10</strong>, где 0 = совсем не про меня, 10 = полностью про меня.<br><br>
-            Отвечайте честно — не так, как вы себя представляете другим, а так, как оно есть внутри.
+            Rate each statement from <strong>0 to 10</strong>, where 0 = Not true at all and 10 = Completely true.<br><br>
+            Answer honestly — not as you present yourself to others, but as things actually feel inside.
           </p>
         </div>
       </div>
@@ -1174,53 +1357,20 @@
         </p>
       </div>
 
-      <div class="section-divider">
-        <h4>Дополнительные вопросы — маркеры родительского отчуждения</h4>
-        <div class="bonus-questions">
-          <div class="bonus-item">
-            <label>А. «Мне не позволяли открыто восхищаться мамой — отец это пресекал.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11a"> Да</label><label><input type="checkbox" name="11a2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Б. «Моя мама была красивой или харизматичной женщиной.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11b"> Да</label><label><input type="checkbox" name="11b2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>В. «Отец говорил, что мама плохая, неправильная или недостаточно хорошая.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11c"> Да</label><label><input type="checkbox" name="11c2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Г. «Я старался не быть похожим на маму.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11d"> Да</label><label><input type="checkbox" name="11d2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Д. «Я считаю, что мой отец заслуживал лучшей жены, чем моя мама.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11e"> Да</label><label><input type="checkbox" name="11e2"> Нет</label></div>
-          </div>
-          <div class="bonus-item">
-            <label>Е. «Я чувствую потребность "исправлять" женщин — в том числе дочерей или партнёрш.»</label>
-            <div class="checkbox-group"><label><input type="checkbox" name="11f"> Да</label><label><input type="checkbox" name="11f2"> Нет</label></div>
-          </div>
-        </div>
-        <p style="margin-top: 20px; font-size: 14px; color: var(--muted); font-style: italic;">
-          Если вы ответили ДА на А, В или Г — это указывает на механизм «расщепления» в основе разрушения зуба 11: «Мама была ценной → Отец сказал, что мама плохая → Быть похожим на маму = я плохой → Стыд за видимость → Атака на зуб 11».
-        </p>
-      </div>
-
       <div class="score-panel" id="score-panel-t11">
         <div class="score-display">
           <div class="score-number" id="score-t11">0</div>
-          <div class="score-max">/ 100 баллов</div>
+          <div class="score-max">/ 100 points</div>
           <div class="score-bar"><div class="score-bar-fill" id="bar-t11"></div></div>
-          <button class="calc-btn" onclick="calculateScore('t11')">Подсчитать результат</button>
+          <button class="calc-btn" onclick="calculateScore('t11')">Calculate Score</button>
         </div>
         <div class="score-interpretation" id="interp-t11">
           <h4>Интенсивность паттерна</h4>
           <p>Заполните опросник и нажмите «Подсчитать результат», чтобы узнать своё значение и что оно означает для зуба 11.</p>
           <p style="font-size: 13px;">
-            <strong>0–30:</strong> Слабый паттерн или его отсутствие<br>
-            <strong>31–60:</strong> Умеренный паттерн — стоит наблюдать<br>
-            <strong>61–100:</strong> Выраженный паттерн — зуб, вероятно, серьёзно пострадал
+            <strong>0–30:</strong> Weak or no pattern<br>
+            <strong>31–60:</strong> Moderate pattern — worth monitoring<br>
+            <strong>61–100:</strong> Strong pattern — tooth likely severely affected
           </p>
         </div>
       </div>
@@ -1257,23 +1407,6 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="diagnosis-cta">
-  <div class="container">
-    <div class="cta-inner">
-      <div class="section-label" style="color: var(--rust-light);">Это исследование должно распространяться</div>
-      <h2>Зубы громче слов. Они — <em>самое наглядное доказательство</em> эмоционального насилия и родительского отчуждения.</h2>
-      <p>Если то, что вы здесь прочитали, совпадает с тем, что вы пережили — поделитесь этим.</p>
-      <p>Каждый новый случай, каждый новый наблюдатель делает картину яснее. Нам нужно больше данных. Больше историй. Больше глаз на это явление.</p>
-      <p class="fine-print">Вопросы, наблюдения или результаты диагностики → <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e292919b968787968aa2858f838b8ecc818d8f">[email&#160;protected]</a></p>
-      <div class="cta-group">
-        <a href="/cdn-cgi/l/email-protection#c5b5b6bcb1a0a0b1ad85a2a8a4aca9eba6aaa8" class="cta-primary">Написать нам →</a>
-        <a href="https://psyteeth.com" class="cta-secondary">English version →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ABOUT -->
 <section class="about">
   <div class="container">
@@ -1288,12 +1421,44 @@
       </div>
       <div class="about-right">
         <h2>Исследование началось с <em>моего собственного зуба</em> — и операции, от которой я отказался.</h2>
-        <p>В 2018 году стоматолог рекомендовал резекцию верхушки корня моего зуба 21. Вместо того чтобы согласиться, я начал искать психологический корень проблемы. То, что я обнаружил, полностью изменило направление моей жизни и работы.</p>
-        <p>За последующие годы я выявил, что за каждым хронически повреждённым зубом стоит предсказуемый реляционный паттерн — а за этим паттерном всегда, в той или иной форме, родительское отчуждение. Очернённый родитель. Многолетняя кампания. Заблокированная идентификация. Я, разделённое против себя самого.</p>
-        <div class="about-quote">
-          <p>«Зуб не вызывает проблему. Он её сообщает.»</p>
-        </div>
-        <p>Психостоматология — это дисциплина на стыке стоматологии и психологии. Мы изучаем, как незавершённая сепарация разрушает и отношения, и зубы. Это передний край стоматологической психологии.</p>
+        <p>
+          В 2018 году стоматолог рекомендовал резекцию верхушки корня моего зуба 21. Вместо того чтобы согласиться, я начал искать психологический корень проблемы. То, что я обнаружил, полностью изменило направление моей жизни и работы.
+        </p>
+        <p>
+          За последующие годы я выявил, что за каждым хронически повреждённым зубом стоит предсказуемый реляционный паттерн — а за этим паттерном всегда, в той или иной форме, родительское отчуждение. Очернённый родитель. Многолетняя кампания. Заблокированная идентификация. Я, разделённое против себя самого.
+        </p>
+        <p>
+          <strong>«Зуб не вызывает проблему. Он её сообщает.»</strong>
+        </p>
+        <p>
+          Психостоматология — это дисциплина на стыке стоматологии и психологии. Мы изучаем, как незавершённая сепарация разрушает и отношения, и зубы. Это передний край стоматологической психологии.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSIS CTA -->
+<section class="diagnosis-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label" style="color: var(--rust-light);">Это исследование должно распространяться</div>
+      <h2>Зубы громче слов. Они — <em>самое наглядное доказательство</em> эмоционального насилия и родительского отчуждения.</h2>
+      <p>
+        Если то, что вы здесь прочитали, совпадает с тем, что вы пережили — поделитесь этим.
+      </p>
+      <p>
+        Каждый новый случай, каждый новый наблюдатель делает картину яснее. Нам нужно больше данных. Больше историй. Больше глаз на это явление.
+      </p>
+      <p>
+        Если у вас есть вопросы или результаты диагностики — напишите нам.
+      </p>
+      <p class="fine-print">Без обязательств · Просто разговор</p>
+      <div class="cta-group">
+        <a href="/cdn-cgi/l/email-protection#49393a303d2c2c3d21092e24282025672a2624" class="cta-primary">
+          Написать нам →
+        </a>
+        <a href="#questionnaires" class="cta-secondary">Сначала пройти опросник</a>
       </div>
     </div>
   </div>
@@ -1303,75 +1468,95 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span>Психостоматология №1</span> · С 2020 года
-      </div>
-      <div class="footer-links">
-        <a href="https://psyteeth.com">English version</a>
-        <a href="#" id="email-link"><span class="__cf_email__" data-cfemail="9aeae9e3eeffffeef2dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</span></a>
-        <span style="font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted);">© 2026 Антон Казаков · психостоматология.рф</span>
-      </div>
+      <div class="footer-logo">Психостоматология<span>№1</span></div>
+      <div class="footer-meta">Психостоматологические исследования · С 2020 года</div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Антон Казаков · психостоматология.рф</p>
+      <p>Результаты исследования носят наблюдательный характер. Сайт не предоставляет медицинских или стоматологических диагнозов.</p>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function switchTab(tab) {
-  document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('panel-' + tab).classList.add('active');
-  event.target.classList.add('active');
-}
-
-function updateScore(tab) {
-  const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
-  let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
-  document.getElementById('score-' + tab).textContent = total;
-  document.getElementById('bar-' + tab).style.width = total + '%';
-}
-
-function calculateScore(tab) {
-  const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
-  let total = 0;
-  let filled = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-    if (input.value !== '') filled++;
-  });
-
-  const interp = document.getElementById('interp-' + tab);
-  document.getElementById('score-' + tab).textContent = total;
-  document.getElementById('bar-' + tab).style.width = total + '%';
-
-  let message = '';
-  let detail = '';
-
-  if (total <= 30) {
-    message = 'Слабый паттерн или его отсутствие';
-    detail = tab === 't21'
-      ? 'Низкие показатели по зубу 21 предполагают, что паттерн очернённого отца выражен слабо. Это может означать здоровую идентификацию с отцом — или что паттерн ещё не осознан.'
-      : 'Низкие показатели по зубу 11 нередко маскируются маской силы. Если зуб серьёзно повреждён, а балл низкий — возможно, паттерн активен, но скрыт за компенсаторным поведением.';
-  } else if (total <= 60) {
-    message = 'Умеренный паттерн — стоит наблюдать';
-    detail = tab === 't21'
-      ? 'Умеренный показатель указывает на присутствующий паттерн угождения. Вы можете испытывать периодические трудности с видимостью, самопредъявлением и ощущением права занимать место.'
-      : 'Умеренный показатель указывает на присутствующий паттерн подавления. Вы можете замечать, что выглядите сильным, одновременно испытывая беспомощность в ситуациях, требующих самозащиты.';
-  } else {
-    message = 'Выраженный паттерн — зуб, вероятно, серьёзно пострадал';
-    detail = tab === 't21'
-      ? 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения отца. Стыд за видимость, угождение и ощущение отсутствия права занимать место — вероятно, центральные темы вашей жизни. Разрушение зуба 21, скорее всего, значительное.'
-      : 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения матери. Маска силы, замирание при конфронтации и скрытая беспомощность — вероятно, определяющие черты. Разрушение зуба 11, скорее всего, значительное.';
+<script>
+  function switchTab(tooth) {
+    document.querySelectorAll('.quiz-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.quiz-panel').forEach(p => p.classList.remove('active'));
+    
+    const idx = tooth === 't21' ? 0 : 1;
+    document.querySelectorAll('.quiz-tab')[idx].classList.add('active');
+    document.getElementById('panel-' + tooth).classList.add('active');
   }
 
-  interp.innerHTML = `
-    <h4>${message}</h4>
-    <p>${detail}</p>
-    <p style="font-size: 13px;">
-      <strong>0–30:</strong> Слабый паттерн или его отсутствие<br>
-      <strong>31–60:</strong> Умеренный паттерн — стоит наблюдать<br>
-      <strong>61–100:</strong> Выраженный паттерн — зуб, веро�
+  function updateScore(tooth) {
+    const cls = tooth === 't21' ? '.q21' : '.q11';
+    const inputs = document.querySelectorAll('#panel-' + (tooth === 't21' ? 't21' : 't11') + ' ' + cls);
+    let total = 0;
+    inputs.forEach(inp => {
+      let v = parseInt(inp.value) || 0;
+      if (v < 0) v = 0;
+      if (v > 10) v = 10;
+      total += v;
+    });
+    document.getElementById('score-' + tooth).textContent = total;
+    document.getElementById('bar-' + tooth).style.width = total + '%';
+    
+    const scoreEl = document.getElementById('score-' + tooth);
+    if (total >= 61) scoreEl.style.color = 'var(--rust)';
+    else if (total >= 31) scoreEl.style.color = 'var(--graphite)';
+    else scoreEl.style.color = 'var(--charcoal)';
+  }
+
+  function calculateScore(tooth) {
+    const cls = tooth === 't21' ? '.q21' : '.q11';
+    const panelId = 'panel-' + tooth;
+    const inputs = document.querySelectorAll('#' + panelId + ' ' + cls);
+    let total = 0;
+    inputs.forEach(inp => {
+      let v = parseInt(inp.value) || 0;
+      if (v < 0) v = 0;
+      if (v > 10) v = 10;
+      total += v;
+    });
+
+    document.getElementById('score-' + tooth).textContent = total;
+    document.getElementById('bar-' + tooth).style.width = total + '%';
+
+    const scoreEl = document.getElementById('score-' + tooth);
+    const interpEl = document.getElementById('interp-' + tooth);
+
+    let heading, text, color;
+
+    if (total <= 30) {
+      heading = 'Слабый паттерн (0–30)';
+      text = 'Паттерн, связанный с этим зубом, либо отсутствует, либо хорошо управляется. Это может отражать здоровую психологическую сепарацию — или очень эффективную маску. Если зуб имеет физические повреждения при низком балле, возможно маска силы скрывает паттерн.';
+      color = 'var(--sage)';
+    } else if (total <= 60) {
+      heading = 'Умеренный паттерн (31–60)';
+      text = 'Этот диапазон указывает на активный, но частично управляемый паттерн. Рана присутствует — вы, вероятно, замечаете моменты, когда она управляет поведением. Зубная ткань в этом диапазоне обычно показывает ранние-умеренные признаки деструкции. Это наиболее продуктивная зона для начала работы.';
+      color = 'var(--graphite)';
+    } else {
+      heading = 'Выраженный паттерн (61–100)';
+      text = 'Паттерн высокоактивен и, вероятно, определяет как реляционные трудности, так и деструкцию зубов. Люди в этом диапазоне часто описывают глубокий стыд (зуб 21) или устойчивые реакции замирания в конфликте (зуб 11). Это не необратимо — но это требует настоящей работы по психологической сепарации, а не косметического ремонта зубов.';
+      color = 'var(--rust)';
+    }
+
+    scoreEl.style.color = color;
+    interpEl.innerHTML = `
+      <h4 style="color: ${color}">${heading}</h4>
+      <p>${text}</p>
+      <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
+        Сохраните свой балл. Пройдите тест повторно через 4–8 недель работы с паттерном, чтобы отследить изменения.
+      </p>
+      <a href="mailto:psychostomatology@gmail.com" class="calc-btn" style="
+        display: inline-block; margin-top: 16px; padding: 12px 24px;
+        background: var(--rust); color: white; text-decoration: none;
+        font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em;
+        text-transform: uppercase;">
+        Написать нам →
+      </a>
+    `;
+  }
+</script>
+</body>
+</html>
