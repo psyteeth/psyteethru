@@ -283,9 +283,15 @@
 
   .concept-card h3 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 12px;
     color: var(--charcoal);
+  }
+
+  em {
+    color: var(--rust-light);
+    font-style: normal;
+    font-weight: 500;
   }
 
   .concept-card p {
@@ -353,7 +359,7 @@
 
   .step h3 {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--ivory);
     margin-bottom: 16px;
   }
@@ -362,6 +368,7 @@
     font-size: 15px;
     color: var(--bone);
     line-height: 1.75;
+    font-weight: 400;
   }
 
   .step p strong {
@@ -440,7 +447,7 @@
 
   .quiz-info h3 {
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 12px;
     color: var(--charcoal);
   }
@@ -448,22 +455,28 @@
   .quiz-info .meta-row {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     margin-top: 16px;
   }
 
   .meta-item {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    color: var(--muted);
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    gap: 3px;
   }
 
   .meta-item span:first-child {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: var(--rust);
-    min-width: 80px;
+  }
+
+  .meta-item span:last-child {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
   }
 
   .quiz-instructions {
@@ -669,7 +682,7 @@
 
   .score-interpretation h4 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 12px;
     color: var(--charcoal);
   }
@@ -1041,24 +1054,26 @@
         <p>
           О том, что стоит за передними резцами — узнайте в опросниках ниже. По остальным зубам — приходите на диагностику.
         </p>
-        <a href="#questionnaires" class="cta-primary" style="margin-top: 8px;">Пройти опросник <span>→</span></a>
-        <a href="https://psyteeth.github.io/hi/" class="cta-secondary" style="margin-top: 8px;">Записаться на диагностику <span>→</span></a>
+        <div class="cta-group" style="margin-top: 24px;">
+          <a href="#questionnaires" class="cta-primary">Пройти опросник <span>→</span></a>
+          <a href="https://psyteeth.github.io/hi/" class="cta-secondary">Записаться на диагностику <span>→</span></a>
+        </div>
       </div>
       <div class="concept-cards">
         <div class="concept-card">
           <div class="tooth-num">Зуб 21 · Верхний левый центральный резец</div>
           <h3>Мамкин угодник / угодница</h3>
-          <p>Мама говорила, что папа плохой. Или не говорила — но всем видом показывала. Быть похожим на него стало опасно. Этот зуб деформируется у тех, кто вырос с ощущением, что занимать место, быть заметным, существовать в полную силу — это как-то неприлично. Основная стратегия: быть хорошим. Для всех. Любой ценой.</p>
+          <p>Мама говорила, что папа плохой. Или не говорила — но <em>всем видом показывала</em>. Быть похожим на него стало опасно. Этот зуб деформируется у тех, кто вырос с ощущением, что занимать место, быть заметным, существовать в полную силу — это как-то неприлично. Основная стратегия: <em>быть хорошим. Для всех. Любой ценой.</em></p>
         </div>
         <div class="concept-card">
           <div class="tooth-num">Зуб 11 · Верхний правый центральный резец</div>
           <h3>Папин солдат / супер герл</h3>
-          <p>Папа говорил, что мама плохая. Или не говорил — но мамины слёзы были явно его рук дело. Быть похожим на неё стало стыдно. Этот зуб разрушается у тех, кто вырос с ощущением, что просить о помощи, показывать слабость, нуждаться в ком-то — это позорно. Внешне — несокрушимый. Внутри — замирает, когда по-настоящему надо дать отпор.</p>
+          <p>Папа говорил, что мама плохая. Или не говорил — но <em>мамины слёзы были явно его рук дело</em>. Быть похожим на неё стало стыдно. Этот зуб разрушается у тех, кто вырос с ощущением, что просить о помощи, показывать слабость, нуждаться в ком-то — это позорно. Внешне — несокрушимый. <em>Внутри — замирает, когда по-настоящему надо дать отпор.</em></p>
         </div>
         <div class="concept-card" style="border-left-color: var(--sage);">
           <div class="tooth-num" style="color: var(--sage);">Ключевое открытие</div>
           <h3>Мамкиных угодников больше, чем папкиных солдат.</h3>
-          <p>Зуб 21 встречается чаще. Это совпадает с тем, что описывал Ричард Гарднер: отцов очерняют чаще. Но вот что неожиданно: рана отца виднее. Рана матери спрятана за маской силы — и сидит значительно глубже. Папины солдаты реже приходят за помощью. И реже признают, что она нужна.</p>
+          <p>Зуб 21 встречается чаще. Это совпадает с тем, что описывал Ричард Гарднер: <em>отцов очерняют чаще</em>. Но вот что неожиданно: рана отца виднее. <em>Рана матери спрятана за маской силы — и сидит значительно глубже.</em> Папины солдаты реже приходят за помощью. И реже признают, что она нужна.</p>
         </div>
       </div>
     </div>
@@ -1078,21 +1093,21 @@
         <span class="step-num">01</span>
         <h3>Тебя научили, кто хороший, а кто плохой</h3>
         <p>
-          Один родитель — святой. Второй — чудовище. Так решил тот, кого ты теперь защищаешь. Твоя нервная система это приняла. <strong>Деваться было некуда.</strong>
+          Один родитель — святой. Второй — чудовище. <em>Так решил тот, кого ты теперь защищаешь.</em> Твоя нервная система это приняла. Деваться было некуда.
         </p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <h3>Быть похожим на «плохого» стало опасно</h3>
         <p>
-          Ты начал прятать его черты, его улыбку, его характер, его способ думать и действовать. Потому что показывать их было страшно. <strong>Лимбическая система запомнила: это угроза.</strong>
+          Ты начал прятать его черты, его улыбку, его характер, его способ думать и действовать. <em>Потому что показывать их было страшно.</em> Лимбическая система запомнила: это угроза.
         </p>
       </div>
       <div class="step">
         <span class="step-num">03</span>
         <h3>Зуб это записал</h3>
         <p>
-          Чем дольше длилась кампания очернения — тем глубже ушёл запрет. Зуб, связанный с этим родителем, начал разрушаться. <strong>Это не метафора.</strong> Это то, что мы наблюдаем снова и снова с 2020 года.
+          Чем дольше длилась кампания очернения — тем глубже ушёл запрет. Зуб, связанный с этим родителем, начал разрушаться. <em>Это не метафора.</em> Это то, что мы наблюдаем снова и снова с 2020 года.
         </p>
       </div>
     </div>
@@ -1122,9 +1137,9 @@
         <div class="quiz-info">
           <h3>Зуб 21 · Верхний левый центральный резец</h3>
           <div class="meta-row">
-            <div class="meta-item"><span>Связан с</span><span>Мать (идеализирована) / Отец (очернён)</span></div>
-            <div class="meta-item"><span>Основная рана</span><span>Подавленная идентификация с отцом</span></div>
-            <div class="meta-item"><span>Основная маска</span><span>Угождение (быть хорошим)</span></div>
+            <div class="meta-item"><span>Связан с:</span><span>Мать (идеализирована) / Отец (очернён)</span></div>
+            <div class="meta-item"><span>Основная рана:</span><span>Подавленная идентификация с отцом</span></div>
+            <div class="meta-item"><span>Основная маска:</span><span>Угождение (быть хорошим)</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1268,9 +1283,9 @@
         <div class="quiz-info">
           <h3>Зуб 11 · Верхний правый центральный резец</h3>
           <div class="meta-row">
-            <div class="meta-item"><span>Связан с</span><span>Отец (идеализирован) / Мать (очернена)</span></div>
-            <div class="meta-item"><span>Основная рана</span><span>Подавленная идентификация с матерью</span></div>
-            <div class="meta-item"><span>Основная маска</span><span>Сила (ложная твёрдость)</span></div>
+            <div class="meta-item"><span>Связан с:</span><span>Отец (идеализирован) / Мать (очернена)</span></div>
+            <div class="meta-item"><span>Основная рана:</span><span>Подавленная идентификация с матерью</span></div>
+            <div class="meta-item"><span>Основная маска:</span><span>Сила (ложная твёрдость)</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1444,7 +1459,7 @@
       <div class="about-left">
         <div class="section-label">Кто за этим стоит</div>
         <div class="about-name">Антон Казаков</div>
-        <div class="about-title">Психолог · Пионер исследования связи зубов и поведения</div>
+        <div class="about-title">Отец психостоматологии</div>
         <p>Исследую связь зубов и отношений с 2020 года. Разработал и запатентовал психостоматологическую диагностику. Работаю с ЭЭГ — измеряю, что происходит в нервной системе, когда человек сталкивается с темой очернённого родителя.</p>
         <p style="margin-top: 16px;">Мой отец был отчуждён. Я вырос мамкиным угодником. У моей бывшей партнёрши были хронические проблемы с зубом 21 — и после нашего расставания наш сын получил ту же проблему в том же зубе.</p>
         <p style="margin-top: 16px;">Именно тогда исследование стало личным. И игнорировать это стало невозможно.</p>
@@ -1502,7 +1517,8 @@
       <div class="footer-meta">Психостоматологические исследования · С 2020 года</div>
       <div class="footer-meta" style="margin-top:8px;">
         <a href="https://psyteeth.com" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.com</a>
-        <a href="https://psyteeth.ru/blog" style="color:var(--muted);text-decoration:none;">psyteeth.ru/blog</a>
+        <a href="https://psyteeth.ru/#blog" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.ru/блог</a>
+        <a href="mailto:psyteeth@gmail.com" style="color:var(--muted);text-decoration:none;">psyteeth@gmail.com</a>
       </div>
     </div>
     <div class="footer-bottom">
