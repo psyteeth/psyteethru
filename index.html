@@ -1149,6 +1149,9 @@
             <div class="meta-item"><span>Связан с:</span><span>Мать (идеализирована) / Отец (очернён)</span></div>
             <div class="meta-item"><span>Основная рана:</span><span>Подавленная идентификация с отцом</span></div>
             <div class="meta-item"><span>Основная маска:</span><span>Угождение (быть хорошим)</span></div>
+            <div class="meta-item"><span>В жизни:</span><span>Не сможет сделать больно женщинам-нарциссам</span></div>
+            <div class="meta-item"><span>Компенсирует:</span><span>На невинных мужчинах, в том числе сыновьях</span></div>
+            <div class="meta-item"><span>Их ложь:</span><span>Обвинение мужчин</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1295,6 +1298,9 @@
             <div class="meta-item"><span>Связан с:</span><span>Отец (идеализирован) / Мать (очернена)</span></div>
             <div class="meta-item"><span>Основная рана:</span><span>Подавленная идентификация с матерью</span></div>
             <div class="meta-item"><span>Основная маска:</span><span>Сила (ложная твёрдость)</span></div>
+            <div class="meta-item"><span>В жизни:</span><span>Не сможет сделать больно мужчинам-нарциссам</span></div>
+            <div class="meta-item"><span>Компенсирует:</span><span>На невинных женщинах, в том числе дочерях</span></div>
+            <div class="meta-item"><span>Их ложь:</span><span>Обвинение женщин</span></div>
           </div>
         </div>
         <div class="quiz-instructions">
@@ -1535,68 +1541,35 @@ function switchTab(tab) {
   document.getElementById('panel-' + tab).classList.add('active');
   event.target.classList.add('active');
 }
-
 function updateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
 }
-
 function calculateScore(tab) {
   const inputs = document.querySelectorAll('.' + (tab === 't21' ? 'q21' : 'q11'));
   let total = 0;
-  inputs.forEach(input => {
-    const val = Math.min(10, Math.max(0, parseInt(input.value) || 0));
-    total += val;
-  });
-
+  inputs.forEach(function(input) { total += Math.min(10, Math.max(0, parseInt(input.value) || 0)); });
   document.getElementById('score-' + tab).textContent = total;
   document.getElementById('bar-' + tab).style.width = total + '%';
-
   const interp = document.getElementById('interp-' + tab);
-  let heading = '';
-  let text = '';
-  let color = '';
-
+  let heading, text, color;
   if (total <= 30) {
     heading = 'Слабый паттерн (0–30)';
-    text = tab === 't21'
-      ? 'Низкие показатели по зубу 21 предполагают, что паттерн очернённого отца выражен слабо. Это может означать здоровую идентификацию с отцом — или что паттерн ещё не осознан.'
-      : 'Низкие показатели по зубу 11 нередко маскируются маской силы. Если зуб серьёзно повреждён, а балл низкий — возможно, паттерн активен, но скрыт за компенсаторным поведением.';
+    text = tab === 't21' ? 'Низкие показатели по зубу 21 предполагают, что паттерн очернённого отца выражен слабо.' : 'Низкие показатели по зубу 11 нередко маскируются маской силы.';
     color = 'var(--sage)';
   } else if (total <= 60) {
     heading = 'Умеренный паттерн (31–60)';
-    text = tab === 't21'
-      ? 'Умеренный показатель указывает на присутствующий паттерн угождения. Вы можете испытывать периодические трудности с видимостью, самопредъявлением и ощущением права занимать место.'
-      : 'Умеренный показатель указывает на присутствующий паттерн подавления. Вы можете замечать, что выглядите сильным, одновременно испытывая беспомощность в ситуациях, требующих самозащиты.';
+    text = tab === 't21' ? 'Умеренный показатель указывает на присутствующий паттерн угождения.' : 'Умеренный показатель указывает на присутствующий паттерн подавления.';
     color = 'var(--graphite)';
   } else {
     heading = 'Выраженный паттерн (61–100)';
-    text = tab === 't21'
-      ? 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения отца. Стыд за видимость, угождение и ощущение отсутствия права занимать место — вероятно, центральные темы вашей жизни. Разрушение зуба 21, скорее всего, значительное.'
-      : 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения матери. Маска силы, замирание при конфронтации и скрытая беспомощность — вероятно, определяющие черты. Разрушение зуба 11, скорее всего, значительное.';
+    text = tab === 't21' ? 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения отца.' : 'Высокий показатель указывает на глубоко укоренившийся паттерн очернения матери.';
     color = 'var(--rust)';
   }
-
-  interp.innerHTML = `
-    <h4 style="color: ${color}">${heading}</h4>
-    <p>${text}</p>
-    <p style="font-size: 13px; margin-top: 16px; color: var(--muted);">
-      Сохраните свой балл. Пройдите тест повторно через 4–8 недель работы с паттерном, чтобы отследить изменения.
-    </p>
-    <a href="mailto:psyteeth@gmail.com" class="calc-btn" style="
-      display: inline-block; margin-top: 16px; padding: 12px 24px;
-      background: var(--rust); color: white; text-decoration: none;
-      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
-      text-transform: uppercase;">
-      Обсудить результат →
-    </a>
-  `;
+  interp.innerHTML = '<h4 style="color:' + color + '">' + heading + '</h4><p>' + text + '</p><a href="mailto:psyteeth@gmail.com" class="calc-btn" style="display:inline-block;margin-top:16px;padding:12px 24px;background:var(--rust);color:white;text-decoration:none;font-size:11px;text-transform:uppercase;">Обсудить результат →</a>';
 }
 </script>
 </body>
