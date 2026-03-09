@@ -1062,7 +1062,7 @@
     <!-- EMAIL TEMPLATE T21 -->
     <div class="quiz-panel" id="panel-t21-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
       <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Отправить результат в исследование</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="/cdn-cgi/l/email-protection#e595969c918080918da58288848c89cb868a88" style="color:var(--rust);"><span class="__cf_email__" data-cfemail="2353505a574646574b63444e424a4f0d404c4e">[email&#160;protected]</span></a></p>
+      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="mailto:psyteeth@gmail.com" style="color:var(--rust);">psyteeth@gmail.com</a></p>
       <pre id="email-template-t21" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Тема: Результаты опросника — зуб 21
 
 Человек А: [пол], [возраст], [страна], зуб 21 — проблемный [пломба/коронка/кариес/удалён], баллы: ___
@@ -1228,7 +1228,7 @@
     <!-- EMAIL TEMPLATE T11 -->
     <div class="quiz-panel" id="panel-t11-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
       <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Отправить результат в исследование</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="/cdn-cgi/l/email-protection#e09093999485859488a0878d81898cce838f8d" style="color:var(--rust);"><span class="__cf_email__" data-cfemail="86f6f5fff2e3e3f2eec6e1ebe7efeaa8e5e9eb">[email&#160;protected]</span></a></p>
+      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="mailto:psyteeth@gmail.com" style="color:var(--rust);">psyteeth@gmail.com</a></p>
       <pre id="email-template-t11" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Тема: Результаты опросника — зуб 11
 
 Человек А: [пол], [возраст], [страна], зуб 11 — проблемный [пломба/коронка/кариес/удалён], баллы: ___
@@ -1312,7 +1312,7 @@
       <div class="footer-meta" style="margin-top:8px;">
         <a href="https://psyteeth.com" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.com</a>
         <a href="https://psyteeth.ru/#blog" style="color:var(--muted);text-decoration:none;margin-right:16px;">psyteeth.ru/блог</a>
-        <a href="/cdn-cgi/l/email-protection#4535363c312020312d052228242c296b262a28" style="color:var(--muted);text-decoration:none;"><span class="__cf_email__" data-cfemail="7e0e0d070a1b1b0a163e19131f1712501d1113">[email&#160;protected]</span></a>
+        <a href="mailto:psyteeth@gmail.com" style="color:var(--muted);text-decoration:none;">psyteeth@gmail.com</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1321,7 +1321,7 @@
     </div>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const aboutVariants = [
   {
     html: '<div class="about-name">Антон Казаков</div><div class="about-title">Психостоматолог</div><p>Исследую связь зубов и сепарации с 2020 года. Разработал и запатентовал психостоматологическую диагностику. Работаю с ЭЭГ — измеряю нейробиологический след незавершённой сепарации в реальном времени.</p><p style="margin-top:16px;"><a href="https://t.me/psy_teeth_official" style="color:var(--rust);">Телеграм — Психостоматология №1</a></p>'
@@ -1551,4 +1551,20 @@ function calculateScore(tab) {
   document.getElementById('interp-' + tab).innerHTML =
     '<h4 style="color:' + color + '">' + heading + '</h4><p>' + detail + '</p>';
 
-  const ema
+  const emailBlock = document.getElementById('panel-' + tab + '-email');
+  if (emailBlock) emailBlock.style.display = 'block';
+}
+
+function copyEmailTemplate(tab) {
+  const el = document.getElementById('email-template-' + tab);
+  if (!el) return;
+  navigator.clipboard.writeText(el.textContent).then(() => {
+    const btn = el.nextElementSibling;
+    const orig = btn.textContent;
+    btn.textContent = 'Скопировано ✓';
+    setTimeout(() => btn.textContent = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
