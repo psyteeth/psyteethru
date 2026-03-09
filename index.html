@@ -1062,14 +1062,20 @@
 
     <!-- EMAIL TEMPLATE T21 -->
     <div class="quiz-panel" id="panel-t21-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
-      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Отправить результат в исследование</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="mailto:psyteeth@gmail.com" style="color:var(--rust);">psyteeth@gmail.com</a></p>
-      <pre id="email-template-t21" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Тема: Результаты опросника — зуб 21
+      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Участвовать в исследовании</div>
+      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 8px;">Пройди опросник, скопируй результат и отправь — это займёт минуту. Приложи скриншот с баллами.</p>
+      <p style="font-size: 14px; color: var(--charcoal); opacity: 0.7; margin-bottom: 20px;">Хочешь проверить кого-то другого? Дай им пройти опросник и пришли их результат тоже.</p>
+      <pre id="email-template-t21" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Зуб 21 — [здоровый / пломба / кариес / коронка / удалён]
+Баллы: ___/100
+Пол: М/Ж
+Возраст: ___
+Страна: ___
 
-Человек А: [пол], [возраст], [страна], зуб 21 — проблемный [пломба/коронка/кариес/удалён], баллы: ___
-
-Человек Б: [пол], [возраст], [страна], зуб 21 — здоровый, баллы: ___</pre>
-      <button onclick="copyEmailTemplate('t21')" style="margin-top: 16px; background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">Скопировать шаблон</button>
+(приложи скриншот с результатом)</pre>
+      <div style="display:flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
+        <button onclick="sendTelegram('t21')" style="background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Написать в Telegram</button>
+        <button onclick="sendEmail('t21')" style="background: transparent; color: var(--rust); border: 1px solid var(--rust); padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Отправить на почту</button>
+      </div>
     </div>
 
     <!-- ЗУБ 11 -->
@@ -1228,14 +1234,20 @@
 
     <!-- EMAIL TEMPLATE T11 -->
     <div class="quiz-panel" id="panel-t11-email" style="display:none; margin-top: 32px; background: var(--ivory); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 32px; max-width: 680px;">
-      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Отправить результат в исследование</div>
-      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 20px;">Скопируй шаблон, заполни данные и отправь на <a href="mailto:psyteeth@gmail.com" style="color:var(--rust);">psyteeth@gmail.com</a></p>
-      <pre id="email-template-t11" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Тема: Результаты опросника — зуб 11
+      <div class="section-label" style="color: var(--rust); margin-bottom: 16px;">Участвовать в исследовании</div>
+      <p style="font-size: 15px; color: var(--charcoal); margin-bottom: 8px;">Пройди опросник, скопируй результат и отправь — это займёт минуту. Приложи скриншот с баллами.</p>
+      <p style="font-size: 14px; color: var(--charcoal); opacity: 0.7; margin-bottom: 20px;">Хочешь проверить кого-то другого? Дай им пройти опросник и пришли их результат тоже.</p>
+      <pre id="email-template-t11" style="background: #f0ebe0; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; border-radius: 2px; white-space: pre-wrap; color: var(--charcoal);">Зуб 11 — [здоровый / пломба / кариес / коронка / удалён]
+Баллы: ___/100
+Пол: М/Ж
+Возраст: ___
+Страна: ___
 
-Человек А: [пол], [возраст], [страна], зуб 11 — проблемный [пломба/коронка/кариес/удалён], баллы: ___
-
-Человек Б: [пол], [возраст], [страна], зуб 11 — здоровый, баллы: ___</pre>
-      <button onclick="copyEmailTemplate('t11')" style="margin-top: 16px; background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">Скопировать шаблон</button>
+(приложи скриншот с результатом)</pre>
+      <div style="display:flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
+        <button onclick="sendTelegram('t11')" style="background: var(--rust); color: white; border: none; padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Написать в Telegram</button>
+        <button onclick="sendEmail('t11')" style="background: transparent; color: var(--rust); border: 1px solid var(--rust); padding: 12px 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">→ Отправить на почту</button>
+      </div>
     </div>
 
   </div>
@@ -1556,15 +1568,21 @@ function calculateScore(tab) {
   if (emailBlock) emailBlock.style.display = 'block';
 }
 
-function copyEmailTemplate(tab) {
+function getTemplate(tab) {
   const el = document.getElementById('email-template-' + tab);
-  if (!el) return;
-  navigator.clipboard.writeText(el.textContent).then(() => {
-    const btn = el.nextElementSibling;
-    const orig = btn.textContent;
-    btn.textContent = 'Скопировано ✓';
-    setTimeout(() => btn.textContent = orig, 2000);
-  });
+  return el ? el.textContent.trim() : '';
+}
+
+function sendTelegram(tab) {
+  const text = encodeURIComponent(getTemplate(tab));
+  window.open('https://t.me/psyteeth?text=' + text, '_blank');
+}
+
+function sendEmail(tab) {
+  const tooth = tab === 't21' ? '21' : '11';
+  const subject = encodeURIComponent('Результаты опросника — зуб ' + tooth);
+  const body = encodeURIComponent(getTemplate(tab));
+  window.open('mailto:psyteeth@gmail.com?subject=' + subject + '&body=' + body, '_blank');
 }
 </script>
 </body>
