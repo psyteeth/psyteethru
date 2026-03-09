@@ -842,7 +842,7 @@
     <a href="#questionnaires" class="scroll-hint">Проверить себя →</a>
   </div>
   <div class="hero-right">
-    <div class="tooth-graphic">🦷</div>
+    <div class="tooth-graphic" onclick="toothEgg(this)" style="cursor:pointer;">🦷</div>
     <div class="section-label">Психостоматология №1</div>
     <div id="hero-right-body"></div>
     <a href="#questionnaires" class="cta-primary">Проверить свои зубы <span>→</span></a>
@@ -1569,6 +1569,20 @@ function calculateScore(tab) {
   const emailBlock = document.getElementById('panel-' + tab + '-email');
   if (emailBlock) emailBlock.style.display = 'block';
 }
+
+function toothEgg(el) {
+  let msg = el.querySelector('.tooth-msg');
+  if (msg) { msg.remove(); return; }
+  msg = document.createElement('div');
+  msg.className = 'tooth-msg';
+  msg.textContent = 'первый среди лучших, лучший среди первых';
+  msg.style.cssText = 'position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;color:var(--rust-light);opacity:0;transition:opacity 0.4s;pointer-events:none;';
+  el.style.position = 'relative';
+  el.appendChild(msg);
+  requestAnimationFrame(() => msg.style.opacity = '1');
+  setTimeout(() => { msg.style.opacity = '0'; setTimeout(() => msg.remove(), 400); }, 3000);
+}
+
 
 function getTemplate(tab) {
   const el = document.getElementById('email-template-' + tab);
