@@ -159,8 +159,9 @@
     font-size: 320px;
     line-height: 1;
     user-select: none;
-    pointer-events: none;
+    pointer-events: all;
     z-index: 0;
+    cursor: pointer;
   } }
 
   .hero-right > *:not(.tooth-graphic) {
@@ -1571,14 +1572,12 @@ function calculateScore(tab) {
 }
 
 function toothEgg(el) {
-  let msg = el.querySelector('.tooth-msg');
-  if (msg) { msg.remove(); return; }
-  msg = document.createElement('div');
-  msg.className = 'tooth-msg';
+  if (document.getElementById('tooth-easter')) return;
+  const msg = document.createElement('div');
+  msg.id = 'tooth-easter';
   msg.textContent = 'первый среди лучших, лучший среди первых';
-  msg.style.cssText = 'position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;color:var(--rust-light);opacity:0;transition:opacity 0.4s;pointer-events:none;';
-  el.style.position = 'relative';
-  el.appendChild(msg);
+  msg.style.cssText = 'position:fixed;bottom:32px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;color:var(--rust-light);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:9999;';
+  document.body.appendChild(msg);
   requestAnimationFrame(() => msg.style.opacity = '1');
   setTimeout(() => { msg.style.opacity = '0'; setTimeout(() => msg.remove(), 400); }, 3000);
 }
