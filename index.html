@@ -611,6 +611,13 @@
 
   .calc-btn:hover { background: var(--ivory); color: var(--charcoal); }
 
+  .faq-item { background: var(--cream); border-left: 3px solid var(--rust); margin-bottom: 2px; }
+  .faq-item summary { cursor: pointer; padding: 22px 28px; font-size: 18px; font-weight: 400; list-style: none; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; font-family: var(--font-mono); color: var(--rust); font-size: 20px; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding: 0 28px 22px; font-size: 15px; color: var(--muted); line-height: 1.8; margin: 0; }
+
   .stats { background: var(--cream); }
 
   .stats-grid {
@@ -844,6 +851,15 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110483403" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Это наука?","acceptedAnswer":{"@type":"Answer","text":"Психологические механизмы — сепарация-индивидуация, родительское отчуждение, привязанность, эмоциональный шантаж — мейнстрим науки. Связь с конкретными зубами — наша проверяемая гипотеза, 220+ задокументированных диагностик."}},
+{"@type":"Question","name":"Стоматолог всё равно нужен?","acceptedAnswer":{"@type":"Answer","text":"Да, всегда. Работа с коммуникацией не заменяет стоматологическое лечение."}},
+{"@type":"Question","name":"Зуб под коронкой или виниром — считается?","acceptedAnswer":{"@type":"Answer","text":"Да. Важна история зуба, а не то, чем он накрыт."}},
+{"@type":"Question","name":"У меня нормальная семья. Это точно про меня?","acceptedAnswer":{"@type":"Answer","text":"Провал сепарации — про механику отношений, а не про внешний фасад семьи."}},
+{"@type":"Question","name":"Что происходит на бесплатной диагностике?","acceptedAnswer":{"@type":"Answer","text":"Час онлайн: один проблемный зуб, паттерн за ним, каждое утверждение проверяется на твоей жизни. Бесплатно, без обязательств."}}
+]}
+</script>
 </head>
 <body>
 
@@ -1390,6 +1406,22 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="concept" id="faq">
+  <div class="container">
+    <div class="section-label">Честные вопросы</div>
+    <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 48px; line-height: 1.2;">Отвечаем до того, <em style="font-style:italic;color:var(--rust);">как ты успел спросить.</em></h2>
+    <div style="max-width: 760px;">
+      <details class="faq-item"><summary>Это наука?</summary><p>Психология, на которой всё стоит — сепарация-индивидуация (Малер, Блос), родительское отчуждение (Гарднер, Чилдресс), привязанность (Боулби), эмоциональный шантаж (Форвард) — мейнстрим, рецензируемые работы. Связь этих механизмов с конкретными зубами — наша гипотеза: 220+ задокументированных диагностик, сформулирована проверяемо. Проверяется на единственной выборке, которую ты контролируешь полностью — на себе.</p></details>
+      <details class="faq-item"><summary>Стоматолог всё равно нужен?</summary><p>Да. Всегда. Ничего на этом сайте не лечит зуб, и никакая работа с коммуникацией не заменяет пломбу. Стоматолог восстанавливает эмаль — мы работаем с тем, что её ломает.</p></details>
+      <details class="faq-item"><summary>Зуб под коронкой или виниром — считается?</summary><p>Да, и даже больше. Важна история зуба, а не то, чем он сейчас накрыт. Если зубу понадобилось вмешательство — паттерн за ним уже сделал свою работу. Керамика мирный договор за тебя не подписывала.</p></details>
+      <details class="faq-item"><summary>У меня нормальная семья. Это точно про меня?</summary><p>Провал сепарации — про механику, а не про фасад. Полная семья, тёплые праздники и «хорошие отношения» с родителем спокойно сосуществуют со страхом, долгом и виной, которые тихо управляют твоими решениями. Опросники выше меряют механику, а не семейное фото.</p></details>
+      <details class="faq-item"><summary>Зачем вы просите присылать скриншоты результатов?</summary><p>Это исследование: баллы уходят в обезличенную базу и публикуются только агрегированно. Ничего индивидуального никогда не публикуется без письменного согласия. Сами опросники на этой странице ничего никуда не отправляют — подсчёт происходит в твоём браузере.</p></details>
+      <details class="faq-item"><summary>Что происходит на бесплатной диагностике?</summary><p>Час онлайн. Берём один твой проблемный зуб и проходим паттерн за ним: фигура, рычаги, повторяющиеся ситуации. Каждое утверждение ты проверяешь на своей жизни. Бесплатно, без обязательств. Не сошлось — потерял час, а гипотеза потеряла очко.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="diagnosis-cta">
   <div class="container">
@@ -1686,6 +1718,7 @@ function calculateScore(tab) {
   } else {
     ctaHtml = '<p style="font-size:13px;color:var(--muted);margin-top:16px;">Низкий балл при разрушенном зубе — повод посмотреть глубже: <a href="https://psyteeth.github.io/hi/" style="color:var(--rust-light);">бесплатная диагностика →</a></p>';
   }
+  ctaHtml += '<button onclick="shareResult(\'' + tab + '\',' + total + ')" style="display:block;background:transparent;color:var(--bone);border:1px solid rgba(255,255,255,0.25);padding:12px 24px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;margin-top:16px;">Поделиться результатом</button>';
   document.getElementById('interp-' + tab).innerHTML =
     '<h4 style="color:' + color + '">' + heading + '</h4><p>' + detail + '</p>' + ctaHtml;
   try { if (typeof ym === 'function' && window.__ps_ym) ym(window.__ps_ym, 'reachGoal', 'quiz_result_' + tab, {score: total}); } catch(e) {}
@@ -1709,6 +1742,22 @@ function toothEgg() {
 function getTemplate(tab) {
   const el = document.getElementById('email-template-' + tab);
   return el ? el.textContent.trim() : '';
+}
+
+function shareResult(tab, score) {
+  const tooth = tab === 't21' ? '21' : '11';
+  const text = 'Мой паттерн по зубу ' + tooth + ': ' + score + '/100 по опроснику психостоматологии. Проверь свой:';
+  const url = 'https://психостоматология.рф/#questionnaires';
+  try { if (typeof ym === 'function' && window.__ps_ym) ym(window.__ps_ym, 'reachGoal', 'share_result', {tooth: tooth, score: score}); } catch(e) {}
+  if (navigator.share) {
+    navigator.share({text: text, url: url}).catch(function(){});
+  } else {
+    const full = text + ' ' + url;
+    const done = function(){ alert('Скопировано — вставь в любой чат'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(full).then(done).catch(function(){ prompt('Скопируй вручную:', full); });
+    } else { prompt('Скопируй вручную:', full); }
+  }
 }
 
 function sendTelegram(tab) {
